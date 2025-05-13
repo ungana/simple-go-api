@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	http.HandleFunc("GET /items", routes.GetItemsHandler)
 	http.HandleFunc("POST /item", routes.CreateItemHandler)
 	fmt.Println("🚀 Listening on port port 8080")
 	http.ListenAndServe(":8080", nil)

@@ -16,6 +16,14 @@ The project will be running at [http://localhost:8080](http://localhost:8080).
 
 ### Available Routes
 
+- GET [http://localhost:8080/items](http://localhost:8080/items)
+
+__Example Request__
+
+```bash
+curl GET http://localhost:8080/items
+```
+
 - POST [http://localhost:8080/item](http://localhost:8080/item)
 
 __Example Payload__

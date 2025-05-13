@@ -32,3 +32,9 @@ func CreateItemHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(item)
 }
+
+func GetItemsHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	json.MarshalIndent(items, "", "  ")
+	json.NewEncoder(w).Encode(items)
+}
